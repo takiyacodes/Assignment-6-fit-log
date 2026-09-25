@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Hero() {
   const scrollToLibrary = () => {
     const element = document.getElementById("library");
@@ -36,11 +38,14 @@ export default function Hero() {
 
         <div className="flex justify-center md:justify-end">
           <div className="relative w-full max-w-md aspect-4/3 rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 flex items-center justify-center">
-             <img
-              src="https://web.programming-hero.com/assets/informative-eHraW5Rc.png"
-              alt="FitLog Banner"
-              className="object-cover w-full h-full"
-            />
+
+            <Image
+  src="https://web.programming-hero.com/assets/informative-eHraW5Rc.png"
+  alt="FitLog Banner"
+  width={600}
+  height={450}
+  className="object-cover w-full h-full"
+/>
           </div>
         </div>
 

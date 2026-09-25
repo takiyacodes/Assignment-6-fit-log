@@ -1,13 +1,19 @@
+
 import Hero from "@/components/Hero";
 import WorkoutCard from "@/components/WorkoutCard";
 import { Workout } from "@/types/workout";
 
 async function getWorkouts(): Promise<Workout[]> {
-  const res = await fetch("https://api.abcz.workers.dev/api/fitlog", {
-    cache: "no-store",
-  });
-  if (!res.ok) throw new Error("Failed to fetch workouts");
-  return res.json();
+  try {
+    const res = await fetch("https://api.abcz.workers.dev/api/fitlog", {
+      cache: "no-store",
+    });
+    if (!res.ok) return [];
+    return await res.json();
+  } catch (error) {
+    console.error("Fetch Error:", error);
+    return [];
+  }
 }
 
 export default async function HomePage() {
@@ -25,11 +31,15 @@ export default async function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {workouts?.map((workout) => (
-            <WorkoutCard key={workout.id} workout={workout} />
-          ))}
-        </div>
+        {workouts.length === 0 ? (
+          <p className="text-zinc-500 text-sm">Loading workouts or failed to fetch...</p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {workouts.map((workout) => (
+              <WorkoutCard key={workout.id} workout={workout} />
+            ))}
+          </div>
+        )}
       </section>
     </main>
   );

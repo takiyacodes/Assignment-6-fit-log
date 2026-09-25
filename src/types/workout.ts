@@ -1,26 +1,24 @@
 export interface Workout {
-  id: string | number;
+  id: number;
   name: string;
-  category: string[];
-  equipment: string;
-  difficulty?: string;
-  sets?: number | string;
-  reps?: string;
-  duration: number | string;
-  calories: number | string;
-  rating: number | string;
   image: string;
-  description?: string;
-  instructions?: string[];
-  isDone?: boolean;
+  muscleGroups: string[];
+  equipment: string;
+  difficulty: string;
+  duration: number;
+  caloriesBurned: number;
+  sets: number;
+  reps: string;
+  rating: number;
+  description: string;
+  instructions: string[];
 }
 
 export interface WorkoutContextType {
-  todayPlan: Workout[];
-  savedWorkouts: Workout[];
-  addToPlan: (workout: Workout) => void;
-  addToSaved: (workout: Workout) => void;
-  removeFromPlan: (id: string | number) => void;
-  removeFromSaved: (id: string | number) => void;
-  toggleDone: (id: string | number) => void;
+  todaysPlan: Workout[];
+  savedForLater: Workout[];
+  addToTodaysPlan: (workout: Workout) => void;
+  addToSavedForLater: (workout: Workout) => void;
+  removeFromTodaysPlan: (id: number) => void;
+  removeFromSavedForLater: (id: number) => void;
 }
