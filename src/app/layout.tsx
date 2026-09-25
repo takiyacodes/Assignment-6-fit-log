@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-[#0a0a0c] text-white antialiased">
         <WorkoutProvider>
-          <Toaster position="bottom-right" toastOptions={{ style: { background: '#1c1c1f', color: '#fff' } }} />
+          <Toaster position="top-right" toastOptions={{ style: { background: '#1c1c1f', color: '#fff' } }} />
           <Navbar />
           {children}
           <Footer />

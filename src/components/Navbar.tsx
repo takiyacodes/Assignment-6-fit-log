@@ -24,7 +24,7 @@ export default function Navbar() {
             alt="FITLOG Icon"
             width={28}
             height={28}
-            className="w-7 h-7 object-contain"
+            className="w-6 h-6 object-contain"
             priority
           />
           <span className="text-xl font-black tracking-wider uppercase text-white">

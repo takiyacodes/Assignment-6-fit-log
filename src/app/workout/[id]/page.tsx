@@ -36,7 +36,7 @@ export default function WorkoutDetailsPage({ params: paramsPromise }: PageProps)
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
+      <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center ">
         <p className="text-zinc-400 animate-pulse">Loading workout details...</p>
       </div>
     );
@@ -52,7 +52,7 @@ export default function WorkoutDetailsPage({ params: paramsPromise }: PageProps)
   }
 
   return (
-    <main className="bg-[#0a0a0c] min-h-screen text-white py-10 px-4 sm:px-6 lg:px-8">
+    <main className="bg-[#0a0a0c] min-h-screen text-white py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         
        
@@ -62,7 +62,7 @@ export default function WorkoutDetailsPage({ params: paramsPromise }: PageProps)
             alt={workout.name}
             width={600}
             height={600}
-            className="w-full h-auto object-cover max-h-[500px]"
+            className="w-full h-auto object-cover max-h-[1000px]"
           />
         </div>
 
