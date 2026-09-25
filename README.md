@@ -36,4 +36,4 @@ FitLog is a modern, dark-themed workout tracking web application designed to hel
 ## 📬 Deployment & Links
 
 - **Live Site:** [https://your-fitlog-app.vercel.app](https://your-fitlog-app.vercel.app)
-- **GitHub Repository:** [https://github.com/your-username/fitlog](https://github.com/your-username/fitlog)
+GitHub Repository: https://github.com/takiyacodes/Assignment-6-fit-log.git
